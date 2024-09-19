@@ -119,51 +119,99 @@ footer {
     }
 }
 
-/* For Tablets and Small Laptops */
-@media (max-width: 1024px) {
+/* Responsive Styles */
+
+/* For small mobile devices (320px - 375px) */
+@media screen and (max-width: 375px) {
+    .about-content {
+        margin-left: 10%;
+        width: 80%;
+        font-size: 10px;
+    }
     .about-content h1 {
-        font-size: 2.5em; /* Adjust font size */
+        font-size: 28px;
     }
-
-    .about-content p {
-        font-size: 1.1em; /* Adjust font size */
-    }
-
-    .image-container img {
-        max-width: 250px; /* Adjust image size */
-    }
-}
-
-/* For Mobile Phones */
-@media (max-width: 768px) {
-    .about-content h1 {
-        font-size: 2em; /* Adjust font size */
-    }
-
-    .about-content p {
-        font-size: 1em; /* Adjust font size */
-    }
-
     .image-container img {
         display: none; /* Adjust image size */
     }
 }
 
-/* For Very Small Mobile Devices */
-@media (max-width: 480px) {
-    .about-content h1 {
-        font-size: 1.5em; /* Adjust font size */
+/* For larger mobile devices (425px) */
+@media screen and (max-width: 425px) {
+    .about-content {
+        margin-left: 10%;
+        width: 80%;
+        font-size: 10px;
     }
-
-    .about-content p {
-        font-size: 0.6em; /* Adjust font size */
-    }r
-
-   .image-container img {
+    .about-content h1 {
+        font-size: 32px;
+    }
+    .image-container img {
         display: none; /* Adjust image size */
     }
+}
 
-    footer {
-        font-size: 0.8em; /* Adjust footer text size */
+/* For tablets (768px) */
+@media screen and (max-width: 768px) {
+    .about-content {
+        margin-left: 15%;
+        width: 70%;
+    }
+    .about-content h1 {
+        font-size: 36px;
+    }
+    .image-container {
+        left: 80px;
+    }
+    .image-container img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+/* For laptops (1024px) */
+@media screen and (max-width: 1024px) {
+    .about-content {
+        margin-left: 15%;
+        width: 60%;
+    }
+    .about-content h1 {
+        font-size: 40px;
+    }
+    .image-container {
+        left: 100px;
+    }
+    .image-container img {
+        width: 280px;
+        height: 280px;
+    }
+}
+
+/* For larger screens (1440px and above) */
+@media screen and (min-width: 1440px) {
+    .about-content {
+        margin-left: 20%;
+        width: 50%;
+    }
+    .about-content h1 {
+        font-size: 48px;
+    }
+    .image-container {
+        left: 100px;
+    }
+    .image-container img {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+/* For extra-large screens (2560px and above) */
+@media screen and (min-width: 2560px) {
+    .about-content h1 {
+        font-size: 60px;
+    }
+    .image-container img {
+        width: 350px;
+        height: 350px;
     }
 }
