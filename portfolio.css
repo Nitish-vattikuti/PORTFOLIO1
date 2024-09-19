@@ -1,0 +1,398 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+.home-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #007bff; /* Button color */
+    color: white; /* Text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none; /* Remove underline */
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
+    z-index: 10; /* Ensure the button is above other content */
+}
+
+.home-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+.hero {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    animation: wave 5s infinite linear;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:  linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGxhbmRzY2FwZXxlbnwwfHx8fDE2NzU0NTMyNDg&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center;
+    background-size: cover;
+    z-index: 1; /* Ensures the background stays behind the content */
+
+}
+
+.hero-background::after {
+    content: '';
+    position: absolute;
+    bottom: -100vh; /* Position it directly after the first image */
+    width: 100%;
+    height: 100vh; /* Height of the second background (black photo) */
+    background: linear-gradient(rgba(255, 255, 0, 0.3), rgba(255, 255, 0, 0.3)), url('https://images.pexels.com/photos/1095624/pexels-photo-1095624.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260') no-repeat center center;
+    background-size: cover;
+    z-index: 2; /* Ensures the background stays behind the content */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1); /* Semi-transparent overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2; /* Ensures the content is on top of the background */
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Transparent background */
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+header nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styles */
+footer {
+    background: rgba(0, 0, 0, 0); /* Transparent background */
+    color: white;
+    text-align: center;
+    padding: 5px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Skills Section */
+.skills {
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0); /* Transparent white background */
+    margin-left: 5%;
+    margin-right: 60%;
+    margin-top: -20px;
+
+}
+.skills h1{
+    font-size: 40px;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    color: #ffffff;
+    margin-right: -750px;
+    text-decoration: underline;
+}
+.skills h2 {
+    font-weight: bold;
+    display: block;
+    font-size: 30px;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+.skill {
+    margin: 20px 10;
+    color: #ffffff;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px; /* Keep label smaller */
+    color:  #ffffff; /* Darker text color */
+}
+
+.progress-bar {
+    background-color: #ffffff;
+    border-radius: 25px;
+    width: 130%;
+    height: 15px;
+    position: relative;
+    overflow: auto;
+}
+
+.progress {
+    display: block;
+    height: 100%;
+    background-color: #4c4e50;
+    color: white;
+    text-align: right;
+    padding-right: 10px;
+    border-radius: 25px 0 0 25px;
+    position: relative;
+    font-size: 12px;
+    line-height: 18px;
+    width: 0%; /* Start at 0% width for animation */
+    animation: progressAnimation 2s forwards; /* Animation for progress bars */
+}
+/* Progress bar animation */
+@keyframes progressAnimation {
+    from {
+        width: 0%;
+    }
+    to {
+        width: var(--progress); /* Will be set dynamically for each skill */
+    }
+}
+/* Professional Skills Section */
+.professional-skills {
+    padding: 3px;
+    text-align: center;
+    margin-top: -18%;
+    margin-left: 38%;
+}
+
+.professional-skills h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Circular Progress Bars */
+.circle-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.circle {
+    display: inline-block;
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+
+.outer-circle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(#007BFF calc(var(--percentage) * 1%), #e0e0e0 calc(var(--percentage) * 1%));
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fillCircle 1s forwards ease-in-out;
+}
+
+.outer-circle span {
+    position: absolute;
+    font-size: 12px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+.languages-container {
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top:-20px;
+    padding-bottom: 10%;
+}
+.languages {
+    display: inline-block;
+    animation: scroll 10s linear infinite;
+}
+.languages img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 15px; /* Adjust margin for spacing if needed */
+    transform: rotate(0deg); 
+}
+@keyframes scroll {
+    0% {
+        transform: translateX(200%);
+    }
+    100% {
+        transform: translateX(-200%);
+    }
+}
+.languages::after {
+    content: "";
+    display: inline-block;
+    width: 100%; /* Ensure there is no gap */
+}
+/* Animation for filling the circular progress bars */
+@keyframes fillCircle {
+    0% {
+        background: conic-gradient(#e0e0e0 0%, #e0e0e0 100%);
+    }
+    100% {
+        background: conic-gradient(#007BFF calc(var(--percentage) * 1%), #e0e0e0 calc(var(--percentage) * 1%));
+    }
+}
+@keyframes wave {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.01);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+.projects{
+    color: #450056;
+    margin-bottom: -50%;
+}
+
+.projects h2{
+    font-size: 40px;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: -35px;
+    
+}
+.project-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background: radial-gradient(circle closest-side at 50% 80%,#535353,#111 300%5)
+    no-repeat;
+}
+#wrapper{
+    width:100%;
+    height: 500px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap: 10px;
+}
+.cwrapper{
+    width: 800px;
+    height: 400px;
+    perspective: 800px;
+    border-radius: 15px;
+    transition: all .3s linear;
+    display: flex;
+    gap: 10px;
+}
+.cwrapper > *,
+.card > * {
+    border-radius: 15px;
+}
+.card {
+    width: 300%;
+    height: 100%;
+    transition: all .3s linear;
+    transform-style: preserve-3d;
+    position: relative;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.DA, .DA .back {
+    background-image:
+    radial-gradient(
+    circle closest-side, rgb(142, 213, 222), #2675e3 300%);
+    font-size: 12px;
+}
+.WD, .WD .back {
+    background-image:
+    radial-gradient(
+    circle closest-side, rgb(235, 105, 105), #ff0000 300%);
+    font-size: 12px;
+}
+.python, .python .back {
+    background-image:
+    radial-gradient(
+    circle closest-side, rgb(201, 231, 167), #a8e426 300%);
+    font-size: 12px;
+}
+.nn, .nn .back {
+    background-image:
+    radial-gradient(
+    circle closest-side, rgb(236, 147, 80), #ef4021 300%);
+    font-size: 12px;
+}
+.front h2 {
+    margin: auto 0;
+    font-size: 20px;
+}
+.front,.back {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+.front {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background-size: cover;
+}
+.pic-holder {
+    width: 100%;
+    aspect-ratio: 1;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all .3s ease;
+}
+.DA .pic-holder {
+    background-image: url("/Users/nitishv/Desktop/DA.webp");
+}
+.WD .pic-holder {
+    background-image: url("/Users/nitishv/Documents/portfolio2/pics/netflix.jpeg");
+}
+.python .pic-holder {
+    background-image: url("/Users/nitishv/Desktop/python.webp");
+}
+.nn .pic-holder {
+    background-image: url("/Users/nitishv/Desktop/nn.webp");
+}
+.back {
+    background-image: linear-gradient(to bottom, #c7c7c7, firebrick);
+    transform: rotateY(180deg);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
