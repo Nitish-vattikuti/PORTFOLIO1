@@ -377,16 +377,16 @@ label {
     transition: all .3s ease;
 }
 .DA .pic-holder {
-    background-image: url("/Users/nitishv/Desktop/DA.webp");
+    background-image: url("./DA.webp");
 }
 .WD .pic-holder {
-    background-image: url("/Users/nitishv/Documents/portfolio2/pics/netflix.jpeg");
+    background-image: url("./netflix.jpeg");
 }
 .python .pic-holder {
-    background-image: url("/Users/nitishv/Desktop/python.webp");
+    background-image: url("./python.webp");
 }
 .nn .pic-holder {
-    background-image: url("/Users/nitishv/Desktop/nn.webp");
+    background-image: url("./nn.webp");
 }
 .back {
     background-image: linear-gradient(to bottom, #c7c7c7, firebrick);
